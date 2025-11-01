@@ -31,7 +31,23 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+Constitution gates (refer to `.specify/memory/constitution.md`):
+
+- Tests: The plan MUST reference an explicit testing strategy (unit, contract,
+  integration) and list required acceptance tests. Contract tests are required
+  for any public-facing interfaces.
+- Interface decisions: If the feature exposes a public library or CLI, the
+  plan MUST document the public interface and the text I/O contract (JSON or
+  human-readable formats) and include a migration path if changing existing
+  contracts.
+- Observability: Plan MUST list logging/tracing/metrics requirements for the
+  feature where applicable.
+- Versioning & Breaks: If the feature introduces public packages or APIs,
+  include a versioning strategy (semver) and migration/deprecation plan for
+  breaking changes.
+
+Any deviations from these gates MUST be documented and justified in the plan
+with an explicit approval note.
 
 ## Project Structure
 

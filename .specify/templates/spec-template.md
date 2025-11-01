@@ -90,6 +90,22 @@
 - **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
 - **FR-005**: System MUST [behavior, e.g., "log all security events"]
 
+### Constitution Compliance (mandatory)
+
+All specifications MUST declare how they comply with the project constitution
+located at `.specify/memory/constitution.md`. At minimum, each spec MUST:
+
+- Include a concrete test strategy (unit, contract, integration) mapping to the
+  functional requirements. Contract tests are REQUIRED for any public interface
+  or library consumed by other modules.
+- Identify any public CLI / text I/O interfaces and include expected formats
+  (JSON, plain text) and sample interactions.
+- Specify required observability (logs, metrics, traces) for production code
+  paths introduced by the feature.
+- Document any deviations from the constitution with a rationale and link to
+  the approval PR or decision record.
+
+
 *Example of marking unclear requirements:*
 
 - **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
